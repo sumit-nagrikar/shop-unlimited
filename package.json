@@ -1,0 +1,21 @@
+{
+  "name": "shop-unlimited",
+  "version": "1.0.0",
+  "description": "E-commerce application with client, server, and admin panels.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx concurrently \"npm run server\" \"npm run client\" \"npm run admin\"",
+    "client": "cd ./client && npm run client",
+    "server": "cd ./server && npm run server",
+    "admin": "cd ./admin && npm run admin"
+  },
+  "keywords": [],
+  "author": "Sumit",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.0"
+  },
+  "dependencies": {}
+}
