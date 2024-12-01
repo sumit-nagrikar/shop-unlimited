@@ -16,7 +16,14 @@ connectCloudinary()
 
 // middlewares
 app.use(express.json())
-app.use(cors({origin: '*'}))
+// Allow requests from your frontend's URL
+app.use(
+    cors({
+      origin: 'https://shop-unlimited-git-main-sumit-nagrikars-projects.vercel.app/',//Deployed frontend URL
+      methods: 'GET,POST,PUT,DELETE', // Allowed HTTP methods
+      credentials: true, // Allowed cookies
+    })
+  );
 
 // api endpoints
 app.use('/api/user',userRouter)
