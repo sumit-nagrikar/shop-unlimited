@@ -17,13 +17,26 @@ connectCloudinary()
 // middlewares
 app.use(express.json())
 // Allow requests from your frontend's URL
-app.use(
-    cors({
-      origin: 'https://shop-unlimited-git-main-sumit-nagrikars-projects.vercel.app',//Deployed frontend URL
-      methods: 'GET,POST,PUT,DELETE', // Allowed HTTP methods
-      credentials: true, // Allowed cookies
-    })
-  );
+// const allowedOrigins = [
+//     'https://shop-unlimited-git-main-sumit-nagrikars-projects.vercel.app', // Deployed frontend URL
+//     'http://localhost:4000', // Local frontend for testing
+//   ];
+  
+//   app.use(
+//     cors({
+//       origin: function (origin, callback) {
+//         // Allow requests with no origin (like mobile apps or curl)
+//         if (!origin || allowedOrigins.includes(origin)) {
+//           callback(null, true);
+//         } else {
+//           callback(new Error('Not allowed by CORS'));
+//         }
+//       },
+//       methods: 'GET,POST,PUT,DELETE', // Allowed HTTP methods
+//       credentials: true, // Allow cookies
+//     })
+//   );
+app.use(cors());
 
 // api endpoints
 app.use('/api/user',userRouter)
