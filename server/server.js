@@ -19,7 +19,7 @@ app.use(express.json())
 // Allow requests from your frontend's URL
 app.use(
     cors({
-      origin: 'https://shop-unlimited-git-main-sumit-nagrikars-projects.vercel.app/',//Deployed frontend URL
+      origin: 'https://shop-unlimited-git-main-sumit-nagrikars-projects.vercel.app',//Deployed frontend URL
       methods: 'GET,POST,PUT,DELETE', // Allowed HTTP methods
       credentials: true, // Allowed cookies
     })
