@@ -1,4 +1,0 @@
-backend: https://shop-unlimited-backend.vercel.app
-client: https://shop-unlimited-frontend.vercel.app
-admin: https://shop-unlimited-admin.vercel.app
-mongoDB: shop-unlimited
